@@ -1,0 +1,38 @@
+.LiveStreamer {
+  background-color: #ffaa4466;
+  padding: 1rem 3rem;
+  color: #440022;
+}
+
+.flex {
+  display: flex;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.verticalPad {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+input {
+  border-radius: 0.5em;
+  border: 1px solid #88552266;
+  font-size: 0.8em;
+  padding: 0 0.7em;
+}
+
+button {
+  padding: 0em 0.7em;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  border: 1px solid #88552266;
+  background: #ffffff00;
+  color: #440022;
+
+  &:hover{
+    box-shadow: 1px 1px 3px 1px #88552266;
+  }
+}
