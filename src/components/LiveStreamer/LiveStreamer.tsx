@@ -1,29 +1,23 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import './LiveStreamer.scss'
 
 export default function LiveStreamer() {
 
-  async function test(e) {
-    console.log(e.srcElement)
-    const port = await navigator.serial.requestPort();
-  }
+  //const [port, setport] = useState(null)
 
   const baudRef:any = useRef(null)
   useEffect(() => {
     baudRef.current.value = localStorage.baud == undefined ? 1000000 : localStorage.baud
-    navigator.serial.addEventListener('connect', test);
-    return () => {
-      navigator.serial.removeEventListener('connect',test)
-    }
+    return
   }, [])
 
   // Try to connect to a serial port
   async function connectSerial() {
     try {
-        port = await navigator.serial.requestPort();
-        await port.open({ baudrate: baudRef.current.value })
-        //listenToPort()
+        const port = await navigator.serial.requestPort();
+        await port.open({ baudRate: baudRef.current.value })
+        //listenToPort(port)
     } catch {
         alert("Serial Connection Failed");
     }
