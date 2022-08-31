@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@react-three/drei": "^9.17.1",
+    "@react-three/drei": "^9.25.2",
     "@react-three/fiber": "^8.2.0"
   },
   "devDependencies": {
